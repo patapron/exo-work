@@ -7,6 +7,8 @@ import { AppRoutingModule } from './app-routing.modules';
 import { ExoWorkModule } from './modules/exo-work.module';
 import { MatToolbarModule } from '@angular/material';
 import { HomeComponent } from './components/home/home.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { HomeComponent } from './components/home/home.component';
     BrowserModule,
     AppRoutingModule,
     ExoWorkModule,
-    MatToolbarModule
+    MatToolbarModule,
+    HttpClientModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
