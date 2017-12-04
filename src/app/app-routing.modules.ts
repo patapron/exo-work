@@ -20,9 +20,9 @@ export const routes: Routes = [
     },
     {
         path: 'exowork',
-        loadChildren: 'app/modules/exo-work.module#ExoWorkModule',
+        loadChildren: 'app/modules/exowork.module#ExoWorkModule',
         data: {
-            name: 'exo-work'
+            name: 'exowork'
         }
     }
 ];

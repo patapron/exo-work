@@ -1,14 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.modules';
-import { ExoWorkModule } from './modules/exo-work.module';
+import { ExoWorkModule } from './modules/exowork.module';
 import { MatToolbarModule } from '@angular/material';
 import { HomeComponent } from './components/home/home.component';
-import { HttpClientModule } from '@angular/common/http';
-import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -20,8 +20,7 @@ import { HttpModule } from '@angular/http';
     AppRoutingModule,
     ExoWorkModule,
     MatToolbarModule,
-    HttpClientModule,
-    HttpModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ExoWorkListComponent } from './exo-work-list.component';
+import { ExoWorkListComponent } from './exowork-list.component';
 
 describe('ExoWorkListComponent', () => {
   let component: ExoWorkListComponent;

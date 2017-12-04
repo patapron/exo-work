@@ -1,8 +1,8 @@
 
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ExoWorkListComponent } from './components/exo-work-list/exo-work-list.component';
-import { MatListModule } from '@angular/material';
+import { ExoWorkListComponent } from './components/exowork-list/exowork-list.component';
+
 
 
 const routes: Routes = [
@@ -18,8 +18,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forChild(routes),
-    MatListModule
+    RouterModule.forChild(routes)
   ],
   declarations: []
 })

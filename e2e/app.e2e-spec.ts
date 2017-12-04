@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('exo-work App', () => {
+describe('exowork App', () => {
   let page: AppPage;
 
   beforeEach(() => {

@@ -1,6 +1,6 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { ExoWorkService } from './exo-work.service';
+import { ExoWorkService } from './exowork.service';
 
 describe('ExoWorkService', () => {
   beforeEach(() => {
