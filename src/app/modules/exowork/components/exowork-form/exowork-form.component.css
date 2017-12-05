@@ -1,0 +1,28 @@
+.form-container{
+    width: 80%;
+    margin: 50px auto;
+}
+
+.label-detail{
+    width: 50%;
+    float: left;
+}
+
+.spinner-container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.fab-top-right{
+    position: absolute;
+    top: -20px;
+    right: 0;
+    margin-right: 25px;
+}
+
+.comment-container{
+    padding-top: 130px;
+}

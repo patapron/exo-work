@@ -1,10 +1,33 @@
-<!-- <mat-list>
-    <h3 mat-subheader>Folders</h3>
-  <mat-list-item *ngFor="let person of personList">
-      <mat-icon mat-list-icon>people</mat-icon>
-      <h4 mat-line>{{person.full_name}}</h4>
-      <p mat-line> {{person.date_joined | date}} </p>
-  </mat-list-item>
- </mat-list> -->
+<div *ngIf="!personList" class="spinner-container">
+    <mat-progress-spinner class="example-margin" [color]="primary" [mode]="'indeterminate'">
+    </mat-progress-spinner>
+</div>
+<div *ngIf="personList" fxLayout="row" fxLayoutAlign="center start" class="table-container">
 
- <p>exo-module</p>
+    <mat-card class="card">
+
+        <mat-nav-list>
+            <h3 mat-subheader>Folders</h3>
+            <div *ngFor="let person of personList">
+                <mat-list-item (click)="ShowInfo(person)">
+                    <mat-icon mat-list-icon>people</mat-icon>
+                    <h4 mat-line>{{person.full_name}}</h4>
+                    <p mat-line> {{person.date_joined | date}} </p>
+                    <button mat-icon-button (click)="GoToDetail(person.id)">
+                        <mat-icon>info</mat-icon>
+                    </button>
+                </mat-list-item>
+                <div [hidden]="!personSelected || person.id !== personSelected.id">
+                    <mat-list class="comment-container">
+                        <mat-list-item *ngFor="let comment of person.comments">
+                            <mat-icon mat-list-icon>comment</mat-icon>
+                            <h5 mat-line>Created by: {{comment.user}} - {{comment.created | date}}</h5>
+                            <p mat-line matTooltip="{{comment.body}}">{{comment.body}}</p>
+                        </mat-list-item>
+                    </mat-list>
+                </div>
+            </div>
+            <mat-divider></mat-divider>
+        </mat-nav-list>
+    </mat-card>
+</div>

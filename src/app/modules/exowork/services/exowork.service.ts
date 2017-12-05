@@ -17,17 +17,22 @@ export class ExoWorkService {
 
   constructor(private httpClient: HttpClient) { }
 
-  // private ExtractData(response: Response) {
-  //   return response.json();
-  // }
+  private ExtractData(response: Response) {
+    return response.json();
+  }
 
-  // private HandleError(error: any): Promise<any> {
-  //   return Promise.reject(error);
-  // }
+  private HandleError(error: any): Promise<any> {
+    return Promise.reject(error);
+  }
 
   GetPersonList(): Observable<Person[]> {
     const urlQueryGet = 'http://demopeople.exolever.com/api/consultants';
     return this.httpClient.get<Person[]>(urlQueryGet);
+  }
+
+  GetSection(id: number): Observable<Person> {
+    const urlQueryGet = 'http://demopeople.exolever.com/api/consultants/';
+    return this.httpClient.get<Person>(urlQueryGet + id);
   }
 
 }

@@ -1,0 +1,44 @@
+<div *ngIf="!personDetail" class="spinner-container">
+    <mat-progress-spinner class="example-margin" [color]="primary" [mode]="'indeterminate'">
+    </mat-progress-spinner>
+</div>
+<div *ngIf="personDetail" class="form-container">
+
+
+    <mat-card class="card">
+
+        <mat-card-header>
+            <h4>Person Detail</h4>
+        </mat-card-header>
+        <mat-card-content>
+
+            <mat-form-field class="label-detail">
+                <input disabled matInput placeholder="Name" value="{{personDetail.full_name}}">
+            </mat-form-field>
+
+            <mat-form-field class="label-detail">
+                <input disabled matInput placeholder="Email" value="{{personDetail.email}}">
+            </mat-form-field>
+
+            <mat-form-field class="label-detail">
+                <input disabled matInput placeholder="Location" value="{{personDetail.location}}">
+            </mat-form-field>
+
+            <mat-form-field class="label-detail">
+                <input disabled matInput placeholder="Joined" value="{{personDetail.date_joined | date}}">
+            </mat-form-field>
+
+            <a md-fab color="accent" routerLink="/exowork/add" class="fab-top-right">
+                <mat-icon>add</mat-icon>
+            </a>
+
+            <mat-list class="comment-container">
+                <mat-list-item *ngFor="let comment of personDetail.comments">
+                    <mat-icon mat-list-icon>comment</mat-icon>
+                    <h5 mat-line>Created by: {{comment.user}} - {{comment.created | date}}</h5>
+                    <p mat-line matTooltip="{{comment.body}}">{{comment.body}}</p>
+                </mat-list-item>
+            </mat-list>
+        </mat-card-content>
+    </mat-card>
+</div>
