@@ -28,10 +28,6 @@
                 <input disabled matInput placeholder="Joined" value="{{personDetail.date_joined | date}}">
             </mat-form-field>
 
-            <a md-fab color="accent" routerLink="/exowork/add" class="fab-top-right">
-                <mat-icon>add</mat-icon>
-            </a>
-
             <mat-list class="comment-container">
                 <mat-list-item *ngFor="let comment of personDetail.comments">
                     <mat-icon mat-list-icon>comment</mat-icon>

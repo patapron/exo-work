@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.modules';
 import { ExoWorkModule } from './modules/exowork.module';
-import { MatToolbarModule } from '@angular/material';
+import { MatToolbarModule, MatIconModule, MatButtonModule } from '@angular/material';
 import { HomeComponent } from './components/home/home.component';
 
 
@@ -23,6 +23,8 @@ import { HomeComponent } from './components/home/home.component';
     ExoWorkModule,
     MatToolbarModule,
     HttpClientModule,
+    MatIconModule,
+    MatButtonModule,
     BrowserAnimationsModule
   ],
   providers: [],
